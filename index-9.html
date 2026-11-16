@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="MAHAVEERR — Web developer and creator. Explore Caption AI, VypaarAI and Aakodiya Agro Oil Industries.">
+  <title>MAHAVEERR — Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --bg:#08090d; --panel:#11131b; --muted:#9a9eae; --line:rgba(255,255,255,.09); --white:#f5f6fa; --accent:#a78bfa; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(ellipse at 50% -20%, rgba(124,92,230,.19), transparent 48%), var(--bg); color:var(--white); font-family:"DM Sans",sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1060px, calc(100% - 40px)); margin:auto; }
+    nav { height:78px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { font:700 19px "Space Grotesk",sans-serif; letter-spacing:.16em; }
+    .brand span { color:var(--accent); }
+    .nav-note { color:var(--muted); font-size:13px; }
+    .hero { padding:105px 0 82px; text-align:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; padding:8px 13px; border:1px solid var(--line); border-radius:99px; color:#c7c3d7; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:rgba(255,255,255,.025); }
+    .dot { width:7px; height:7px; background:#8ee6b1; border-radius:50%; box-shadow:0 0 14px #8ee6b1; }
+    h1 { font:700 clamp(48px, 9vw, 88px)/1.02 "Space Grotesk",sans-serif; letter-spacing:-.065em; margin:27px 0 18px; }
+    h1 span { background:linear-gradient(100deg,#fff 10%,#c4b5fd 55%,#8b9cfb); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .intro { color:var(--muted); font-size:clamp(15px,2vw,18px); line-height:1.8; max-width:580px; margin:0 auto; }
+    .hero-actions { display:flex; justify-content:center; gap:12px; margin-top:30px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:12px; font-size:14px; font-weight:600; border:1px solid var(--line); transition:.2s ease; }
+    .btn.primary { background:#eeeaff; color:#171321; border-color:#eeeaff; }
+    .btn:hover { transform:translateY(-2px); border-color:rgba(196,181,253,.55); }
+    section { padding:25px 0 90px; }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:24px; }
+    .kicker { color:var(--accent); font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    h2 { font:600 clamp(27px,4vw,38px) "Space Grotesk",sans-serif; margin:8px 0 0; letter-spacing:-.04em; }
+    .count { color:var(--muted); font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { position:relative; overflow:hidden; display:flex; flex-direction:column; min-height:310px; padding:23px; border:1px solid var(--line); border-radius:20px; background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018)); transition:transform .25s,border-color .25s,background .25s; }
+    .card:hover { transform:translateY(-6px); border-color:rgba(167,139,250,.45); background:linear-gradient(145deg,rgba(167,139,250,.10),rgba(255,255,255,.02)); }
+    .card:before { content:""; position:absolute; width:170px; height:170px; border-radius:50%; background:rgba(139,112,245,.10); filter:blur(45px); top:-90px; right:-70px; pointer-events:none; }
+    .card-head { display:flex; justify-content:space-between; align-items:center; position:relative; }
+    .number { color:#777b8c; font:500 13px "Space Grotesk",sans-serif; }
+    .tag { color:#c9c1e9; border:1px solid rgba(196,181,253,.2); background:rgba(167,139,250,.08); border-radius:99px; padding:6px 9px; font-size:10px; letter-spacing:.04em; }
+    .symbol { display:grid; place-items:center; width:54px; height:54px; border:1px solid var(--line); border-radius:16px; margin:29px 0 20px; font:600 22px "Space Grotesk",sans-serif; color:#d6ccff; background:rgba(167,139,250,.08); }
+    h3 { font:600 21px "Space Grotesk",sans-serif; margin:0 0 9px; letter-spacing:-.025em; }
+    .desc { color:var(--muted); font-size:13px; line-height:1.7; margin:0; }
+    .card-foot { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:25px; color:#d6ccff; font-size:13px; font-weight:600; }
+    .arrow { font-size:18px; transition:transform .2s; }
+    .card:hover .arrow { transform:translate(3px,-3px); }
+    .about { border:1px solid var(--line); background:rgba(255,255,255,.025); border-radius:20px; padding:25px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .about p { color:var(--muted); line-height:1.75; margin:8px 0 0; font-size:14px; max-width:650px; }
+    footer { border-top:1px solid var(--line); padding:25px 0 35px; color:#777b8c; font-size:12px; display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    @media(max-width:800px) { .grid { grid-template-columns:1fr; } .card { min-height:265px; } .hero { padding:82px 0 65px; } .about { align-items:flex-start; flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#">MAHAVEERR<span>.</span></a>
+      <div class="nav-note">Independent projects · 2026</div>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow"><span class="dot"></span> Building ideas into the web</div>
+      <h1>Hey, I'm <span>Mahaveerr.</span></h1>
+      <p class="intro">A student, web creator and curious builder exploring AI, useful digital tools and business ideas. Here's a look at what I've been making.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">Explore my work ↘</a>
+        <a class="btn" href="mailto:">Get in touch</a>
+      </div>
+    </header>
+
+    <section id="projects">
+      <div class="section-top">
+        <div><div class="kicker">Selected work</div><h2>Things I've built.</h2></div>
+        <div class="count">03 projects</div>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://caption-ai-insta.lovable.app/" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="number">01 / PROJECT</span><span class="tag">LOVABLE</span></div>
+          <div class="symbol">✳</div>
+          <h3>Caption AI</h3>
+          <p class="desc">An AI-powered project made to help create captions for Instagram content.</p>
+          <div class="card-foot"><span>View live project</span><span class="arrow">↗</span></div>
+        </a>
+        <a class="card" href="https://mahaveerkumar2.github.io/VypaarAI/" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="number">02 / PROJECT</span><span class="tag">GITHUB PAGES</span></div>
+          <div class="symbol">V.</div>
+          <h3>VypaarAI</h3>
+          <p class="desc">A business-focused AI project exploring smarter ways to support everyday work.</p>
+          <div class="card-foot"><span>View live project</span><span class="arrow">↗</span></div>
+        </a>
+        <a class="card" href="https://mahaveerkumar2.github.io/Aakodiya-Agro-Oil-Industries-Private-Limited-/" target="_blank" rel="noopener noreferrer">
+          <div class="card-head"><span class="number">03 / PROJECT</span><span class="tag">GITHUB PAGES</span></div>
+          <div class="symbol">A.</div>
+          <h3>Aakodiya Agro Oil</h3>
+          <p class="desc">A company website for Aakodiya Agro Oil Industries Private Limited.</p>
+          <div class="card-foot"><span>View live project</span><span class="arrow">↗</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="about">
+        <div><div class="kicker">A little about me</div><h2>Curious by nature. Builder by choice.</h2>
+          <p>I enjoy turning ideas into useful digital experiences and learning by building. This portfolio is where I collect my projects as they grow.</p>
+        </div>
+        <a class="btn" href="#projects">See projects ↑</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 MAHAVEERR. Made with curiosity.</span>
+      <span>Designed for the next idea.</span>
+    </footer>
+  </div>
+</body>
+</html>
